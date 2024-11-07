@@ -4,6 +4,12 @@ body {
     color: #3b2f2f; /* Dark brown text */
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #2e2e2e; /* Dark background for dark mode */
+    color: #ffffff; /* Light text for dark mode */
 }
 
 header {
@@ -11,6 +17,12 @@ header {
     color: white;
     padding: 2em;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header.dark-mode {
+    background-color: #4b2c13; /* Darker shade for dark mode */
+    color: #00ff00; /* Neon green text for dark mode */
 }
 
 main {
@@ -20,6 +32,13 @@ main {
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main.dark-mode {
+    background-color: #3e3e3e; /* Dark background for main section in dark mode */
+    color: #ffffff; /* Light text for dark mode */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Light shadow for dark mode */
 }
 
 .tabs {
@@ -29,14 +48,19 @@ main {
     border-bottom: 2px solid #8b4513;
 }
 
+.tabs.dark-mode {
+    border-bottom-color: #00ff00; /* Neon green border for dark mode */
+}
+
 .tab {
     flex: 1;
     padding: 1em;
     text-align: center;
-    background-color: #d2b48c; /* Tan */
+    background-color: #9b5523; /* Slightly lighter brown */
     border-top: 2px solid #8b4513;
     border-right: 1px solid #8b4513;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+    color: #ffffff; /* White text for contrast */
 }
 
 .tab:last-child {
@@ -44,8 +68,14 @@ main {
 }
 
 .tab:hover {
-    background-color: #c19a6b; /* Light brown */
+    background-color: #7b4313; /* Darker brown for hover effect */
     transform: translateY(-2px);
+}
+
+.tab.dark-mode {
+    background-color: #4b2c13; /* Darker shade for dark mode */
+    border-top-color: #00ff00; /* Neon green border for dark mode */
+    border-right-color: #00ff00; /* Neon green border for dark mode */
 }
 
 .tab.active {
@@ -53,6 +83,12 @@ main {
     font-weight: bold;
     border-bottom: none;
     transform: translateY(0);
+    color: #8b4513; /* Saddle brown */
+}
+
+.tab.dark-mode.active {
+    background-color: #3e3e3e; /* Dark background for active tab in dark mode */
+    color: #00ff00; /* Neon green text for dark mode */
 }
 
 .tab-content {
@@ -69,6 +105,11 @@ main {
     margin: 2em 0;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.image.dark-mode {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Light shadow for dark mode */
 }
 
 footer {
@@ -78,4 +119,10 @@ footer {
     color: #8b4513;
     background-color: #d2b48c;
     border-top: 1px solid #c19a6b;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer.dark-mode {
+    background-color: #4b2c13; /* Darker shade for dark mode */
+    color: #00ff00; /* Neon green text for dark mode */
 }
